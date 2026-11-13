@@ -1,0 +1,60 @@
+/* RAISE 360 modern theme (loaded after main.css and custom.css) */
+:root{
+  --accent-color:#29a9e1; --heading-color:#0f2a3d; --default-color:#4a5a67;
+  --background-color:#ffffff; --surface-color:#ffffff;
+  --brand-grad:linear-gradient(135deg,#29a9e1 0%,#1b78a8 100%);
+  --navy:#0b1e2d; --shadow-sm:0 4px 18px rgba(15,42,61,.07); --shadow-md:0 16px 40px rgba(15,42,61,.13);
+}
+html{scroll-behavior:smooth}
+body{font-feature-settings:"ss01","cv11";-webkit-font-smoothing:antialiased}
+section,.section{padding:96px 0}
+.light-background{background:#f4f8fb}
+
+/* Header: frosted glass */
+.header{background:rgba(11,30,45,.45)!important;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08);transition:background .3s}
+.scrolled .header{background:rgba(11,30,45,.9)!important;box-shadow:0 6px 24px rgba(0,0,0,.18)}
+.header .cta-btn{background:var(--brand-grad)!important;border:0!important;border-radius:50px!important;padding:10px 26px!important;font-weight:600;box-shadow:0 6px 18px rgba(41,169,225,.35);transition:transform .2s}
+.header .cta-btn:hover{transform:translateY(-2px)}
+
+/* Hero */
+.hero{min-height:100vh;display:flex;align-items:center}
+.hero:before{background:linear-gradient(120deg,rgba(11,30,45,.92) 0%,rgba(14,60,90,.78) 55%,rgba(41,169,225,.45) 100%)!important}
+.hero h2{font-size:clamp(34px,6vw,68px);font-weight:800;letter-spacing:-.02em;line-height:1.08;max-width:900px}
+.hero p{font-size:clamp(17px,2vw,22px);font-weight:300;opacity:.92;max-width:640px}
+.hero .btn-get-started{background:var(--brand-grad);border:0;border-radius:50px;padding:15px 38px;font-weight:600;letter-spacing:.02em;box-shadow:0 10px 30px rgba(41,169,225,.45);transition:transform .2s,box-shadow .2s}
+.hero .btn-get-started:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(41,169,225,.55)}
+
+/* Section titles: small label + bold headline, centered */
+.section-title{text-align:center;padding-bottom:56px}
+.section-title h2{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-color);background:rgba(41,169,225,.1);padding:7px 18px;border-radius:50px;margin-bottom:16px}
+.section-title h2:after,.section-title h2:before{display:none!important}
+.section-title p{margin:0 auto;font-size:clamp(26px,3.4vw,40px);font-weight:800;letter-spacing:-.01em;text-transform:none;color:var(--heading-color)}
+
+/* Cards */
+#services .service-item,.team .member,#team .member,.contact .info-item,.stats .stats-item{border:0!important;border-radius:20px!important;box-shadow:var(--shadow-sm);background:#fff;transition:transform .3s,box-shadow .3s}
+#services .service-item:hover,#team .member:hover,.contact .info-item:hover{transform:translateY(-6px);box-shadow:var(--shadow-md)}
+#services .service-item .icon{flex:0 0 54px;width:54px;height:54px;border-radius:15px;background:var(--brand-grad);color:#fff!important;display:flex;align-items:center;justify-content:center;font-size:25px;margin-right:18px;box-shadow:0 8px 20px rgba(41,169,225,.35)}
+#services .service-item .title a{color:var(--heading-color);font-weight:700}
+.stats .stats-item{padding:28px}
+.stats .stats-item span{font-weight:800;font-size:44px;background:var(--brand-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* Tabs as pills */
+.features .nav-tabs .nav-link{border:1px solid #e3ebf1!important;border-radius:16px!important;background:#fff;box-shadow:var(--shadow-sm);transition:all .25s}
+.features .nav-tabs .nav-link:hover{transform:translateY(-3px)}
+.features .nav-tabs .nav-link.active{background:var(--brand-grad)!important;border-color:transparent!important;color:#fff;box-shadow:0 12px 28px rgba(41,169,225,.4)}
+.features .nav-tabs .nav-link.active i,.features .nav-tabs .nav-link.active h4{color:#fff!important}
+.features .tab-pane img{border-radius:28px;box-shadow:var(--shadow-md)}
+.features .tab-pane h3{font-weight:800;letter-spacing:-.01em;color:var(--heading-color)}
+#about img,#training img{border-radius:28px;box-shadow:var(--shadow-md)}
+
+/* Team photos, contact, forms */
+#team .member-photo,#team img{border-radius:50%}
+.contact .php-email-form{border-radius:24px;box-shadow:var(--shadow-md);border:0}
+.contact .php-email-form input,.contact .php-email-form textarea{border-radius:12px}
+.contact .php-email-form button[type=submit]{background:var(--brand-grad);border:0;border-radius:50px;padding:13px 38px;font-weight:600}
+
+/* Footer */
+.footer{background:linear-gradient(160deg,#0b1e2d,#0f3a55)!important}
+.footer .footer-newsletter input[type=submit]{background:var(--brand-grad);border-radius:0 50px 50px 0}
+.scroll-top{border-radius:14px!important;background:var(--brand-grad)!important;box-shadow:0 8px 20px rgba(41,169,225,.4)}
+@media(max-width:768px){section,.section{padding:68px 0}.hero{min-height:88vh}}

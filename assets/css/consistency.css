@@ -1,0 +1,46 @@
+/* RAISE 360 type scale + spacing (loaded last, single source of truth) */
+:root{
+  --fs-body:16px; --fs-small:15px; --fs-lead:18px;
+  --fs-card-title:19px; --fs-h3:26px; --fs-section:clamp(26px,3.2vw,36px);
+  --lh-body:1.75; --radius-card:20px; --radius-img:24px; --pad-section:96px;
+}
+body{font-size:var(--fs-body);line-height:var(--lh-body)}
+body main section{padding:var(--pad-section) 0}
+body main #hero,body main section.hero{padding:0}
+@media(max-width:768px){body main section{padding:68px 0}body main #hero,body main section.hero{padding:0}}
+
+/* Section titles: one style everywhere */
+body main .section-title p{font-size:var(--fs-section);line-height:1.25}
+
+/* Body text: 16px for reading copy, 15px inside cards */
+body main section p,body main section li{font-size:var(--fs-body);line-height:var(--lh-body)}
+body main #hero p{font-size:clamp(17px,2vw,22px)}
+body main .section-title p{font-size:var(--fs-section)}
+body main .services-2 .description,body main #team .member p,body main #team .member span,body main .contact .info-item p,body main .stats .stats-item p,body main .tk-card p{font-size:var(--fs-small);line-height:1.7}
+body main #turnkey .row.justify-content-center p,body main #digitalization .row.justify-content-center p{font-size:var(--fs-lead);line-height:1.8}
+
+/* Headings: h3 = sub-section, h4 = card title */
+body main section h3{font-size:var(--fs-h3);font-weight:800;line-height:1.25}
+body main .service-item .title,body main .service-item .title a,body main .contact .info-item h3,body main #team .member h4,body main .features .tab-pane h4,body main .stats .stats-item p{font-size:var(--fs-card-title)}
+body main .contact .info-item h3,body main #team .member h4,body main .service-item .title{font-weight:700}
+body main .stats .stats-item p{font-size:var(--fs-small);font-weight:500}
+body main .features .nav-link h4{font-size:16px;font-weight:600}
+body main #approach h3{font-size:var(--fs-h3)}
+body main #approach h4{font-size:var(--fs-body);font-weight:500}
+
+/* One font family per role */
+body main h2,body main h3,body main h4{font-family:var(--heading-font)}
+body main p,body main li,body main span{font-family:var(--default-font)}
+body main .stats .stats-item p{font-family:var(--default-font)}
+
+/* Cards and images: same radius */
+body main .service-item,body main #team .member,body main .contact .info-item,body main .stats .stats-item,body main .tk-card{border-radius:var(--radius-card)}
+body main .features .tab-pane img,body main #about img,body main #training img{border-radius:var(--radius-img)}
+body main .features .tab-pane ul li,body main #about li,body main #training li,body main #digitalization li{font-size:var(--fs-body)}
+
+/* Specificity guard: these win over earlier section-specific rules */
+main h3{font-size:var(--fs-h3)!important}
+main .contact .info-item h3{font-size:var(--fs-card-title)!important}
+main .service-item h4,main .service-item .title,main #team .member h4,main .tk-card h4{font-size:var(--fs-card-title)!important}
+main .service-item .description,main #services .service-item .description,main #digitalization .service-item .description{font-size:var(--fs-small)!important;line-height:1.7}
+main h3{font-weight:800!important} main .contact .info-item h3{font-weight:700!important}

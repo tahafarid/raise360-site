@@ -1,0 +1,9 @@
+/* Section titles: numbered eyebrow + headline + accent bar */
+main{counter-reset:sec}
+main .section-title{text-align:center;padding-bottom:60px}
+main .section-title h2{counter-increment:sec;display:inline-flex!important;align-items:center;gap:14px;background:none!important;padding:0!important;margin:0 0 18px;font-size:13px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-color)}
+main .section-title h2::before{content:counter(sec,decimal-leading-zero);display:inline-block!important;background:var(--brand-grad);color:#fff;font-size:12px;font-weight:800;letter-spacing:.06em;padding:6px 12px;border-radius:50px;box-shadow:0 6px 16px rgba(41,169,225,.35)}
+main .section-title h2::after{content:"";display:block!important;width:56px;height:2px;background:linear-gradient(90deg,var(--accent-color),transparent);position:static}
+main .section-title p{position:relative;font-size:var(--fs-section);font-weight:800;letter-spacing:-.015em;line-height:1.2;color:var(--heading-color);margin:0 auto;max-width:860px}
+main .section-title p::after{content:"";display:block;width:76px;height:4px;border-radius:4px;background:var(--brand-grad);margin:22px auto 0}
+@media(max-width:575px){main .section-title h2{font-size:12px;gap:10px;letter-spacing:.16em}main .section-title h2::after{width:30px}}
